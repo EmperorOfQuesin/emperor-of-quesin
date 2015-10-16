@@ -21,7 +21,7 @@ public class Bullet : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        moveDirection = Vector3.right;
+        moveDirection = Vector3.right; //Vector
     }
 
     void Update()
