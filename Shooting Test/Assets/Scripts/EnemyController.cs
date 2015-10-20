@@ -3,7 +3,7 @@ Function used to controll the enemy.
 Creator: Samuel Borges
 Collaborators: Iury Bizoni
 
-Date of last change: 10/15/2015
+Date of last change: 10/19/2015
 */
 
 using UnityEngine;
@@ -16,6 +16,10 @@ public class EnemyController : MonoBehaviour {
     public Transform spawnPoint;
 
     public GameObject enemy;
+
+    public bool isInvincible = false;
+
+    private Color invincibleColor = new Color(0.8f,0.3f,0.3f);
 
 	// Use this for initialization
 	void Start () {
@@ -34,19 +38,30 @@ public class EnemyController : MonoBehaviour {
         //checks if the enemy has reached the middle of the screen
         if (GetComponent<Rigidbody2D>().position.x <= 0)
         {
+
+            //at this point the enemy becomes invincible and its color is changed
+            isInvincible = true;
+            GetComponent<SpriteRenderer>().color = invincibleColor;
+
+
             //if the enemy is above the player it will go down, the further it's from the player, the higher its speed will be
-            if(playerPos < enemyPos)
-                GetComponent<Rigidbody2D>().velocity = new Vector2(enemySpeed, 1.5f*(playerPos - enemyPos));
+            if (playerPos < enemyPos)
+                GetComponent<Rigidbody2D>().velocity = new Vector2(enemySpeed, 2.0f*(playerPos - enemyPos));
             //the same as the previous if, but this time it will go up if the enemy is below the player
             else if(playerPos > enemyPos)
-                GetComponent<Rigidbody2D>().velocity = new Vector2(enemySpeed, 1.5f*(playerPos - enemyPos));
+                GetComponent<Rigidbody2D>().velocity = new Vector2(enemySpeed, 2.0f*(playerPos - enemyPos));
         }
 
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-
+        if (isInvincible == false)
+        {
+            //Destroy the enemy and the bullet if the enemy is not invincible
+            Destroy(gameObject);
+            Destroy(other.gameObject);
+        }
     }
 
     void OnBecameInvisible()
