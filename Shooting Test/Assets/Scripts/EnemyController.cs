@@ -3,7 +3,7 @@ Function used to controll the enemy.
 Creator: Samuel Borges
 Collaborators: Iury Bizoni
 
-Date of last change: 10/19/2015
+Date of last change: 10/20/2015
 */
 
 using UnityEngine;
@@ -20,6 +20,8 @@ public class EnemyController : MonoBehaviour {
     public bool isInvincible = false;
 
     private Color invincibleColor = new Color(0.8f,0.3f,0.3f);
+
+    public int pointsOnDeath; //How many points a monster will give (Setup in Unity)
 
 	// Use this for initialization
 	void Start () {
@@ -56,11 +58,11 @@ public class EnemyController : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (isInvincible == false)
+        if (isInvincible == false) //Destroy the enemy and the bullet if the enemy is not invincible
         {
-            //Destroy the enemy and the bullet if the enemy is not invincible
             Destroy(gameObject);
             Destroy(other.gameObject);
+            ScoreManager.AddPoints(pointsOnDeath);
         }
     }
 

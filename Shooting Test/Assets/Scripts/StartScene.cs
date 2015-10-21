@@ -1,10 +1,11 @@
 ﻿/*
 Script used to manage the start button interaction
 Creator: Iury Bizoni
-Colaborator:
+Colaborator: Samuel Borges
 
-Date of last change: 10/19/2015
+Date of last change: 10/20/2015
 */
+
 using UnityEngine;
 using System.Collections;
 
@@ -26,7 +27,7 @@ public class StartScene : MonoBehaviour {
         Invoke("LoadLevel", 0);
     }
 
-    void LoadLevel()
+    public void LoadLevel()
     {
         Application.LoadLevel("1");
     }

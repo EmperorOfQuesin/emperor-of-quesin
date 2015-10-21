@@ -3,7 +3,7 @@ Function used to instantiate and change bullet's position.
 Creator: Samuel Borges
 Collaborators:
 
-Date of last change: 10/15/2015
+Date of last change: 10/20/2015
 */
 
 using UnityEngine;
@@ -21,7 +21,7 @@ public class Bullet : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        moveDirection = Vector3.right; //Vector
+        moveDirection = Vector3.right;
     }
 
     void Update()

@@ -3,7 +3,7 @@ Function used to spawn randomly monsters (can be as much monster as you want).
 Creator: Samuel Borges
 Collaborators:
 
-Date of last change: 10/15/2015
+Date of last change: 10/20/2015
 */
 
 using UnityEngine;
@@ -26,13 +26,8 @@ public class Spawner : MonoBehaviour
 
     IEnumerator SpawnObject(int index, float seconds)
     {
-        Debug.Log("Waiting for " + seconds + " seconds");
-
         yield return new WaitForSeconds(seconds);
-        // transform.position = new Vector3(spawnPoint.position.x, Random.Range(-yMax, yMax), transform.position.z);
-
         Instantiate(enemies[index], new Vector3(transform.position.x, Random.Range(-yMax, yMax), transform.position.z), transform.rotation);
-
 
         //We've spawned, so now we could start another spawn     
         isSpawning = false;
