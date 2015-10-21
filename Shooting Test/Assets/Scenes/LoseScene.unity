@@ -344,7 +344,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1139346946}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c82cc2787ac1b754db7da59669f8017b, type: 3}
+  m_Script: {fileID: 11500000, guid: 24397ff6c0a480243b35a9421c011649, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1438914389
@@ -635,7 +635,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1139346951}
-        m_MethodName: LoadStage
+        m_MethodName: LoadLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
