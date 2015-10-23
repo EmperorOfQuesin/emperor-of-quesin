@@ -16,17 +16,20 @@ public class Bullet : MonoBehaviour {
     public Transform firePosition;
     GameObject prefab;
 
+
     private Vector3 moveDirection;
 
     // Use this for initialization
     void Start()
     {
         moveDirection = Vector3.right;
+
     }
 
     void Update()
     {
         Vector3 currentPosition = transform.position;
+
 
         if (Input.GetButtonDown("Fire1"))
         {
