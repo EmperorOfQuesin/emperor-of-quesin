@@ -45,14 +45,15 @@ public class EnemyController : MonoBehaviour {
             isInvincible = true;
             GetComponent<SpriteRenderer>().color = invincibleColor;
 
-
+			/*
             //if the enemy is above the player it will go down, the further it's from the player, the higher its speed will be
             if (playerPos < enemyPos)
                 GetComponent<Rigidbody2D>().velocity = new Vector2(enemySpeed, 2.0f*(playerPos - enemyPos));
             //the same as the previous if, but this time it will go up if the enemy is below the player
             else if(playerPos > enemyPos)
                 GetComponent<Rigidbody2D>().velocity = new Vector2(enemySpeed, 2.0f*(playerPos - enemyPos));
-        }
+			*/
+		}
 
     }
 
