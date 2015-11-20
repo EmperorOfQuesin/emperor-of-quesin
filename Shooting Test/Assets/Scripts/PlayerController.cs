@@ -3,7 +3,7 @@ Function used to set player's config.
 Creator: Samuel Borges
 Collaborators: Carla Cremon
 
-Date of last change: 10/21/2015
+Date of last change: 11/19/2015
 */
 
 using UnityEngine;
@@ -13,7 +13,10 @@ public class PlayerController : MonoBehaviour {
 
 	
 	Rigidbody2D rb;
+	//public bool grounded = true;
+	public float jumpPower = 400;
 
+	
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
@@ -22,13 +25,22 @@ public class PlayerController : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 		//makes player jump when "space" is pressed"
-		if (Input.GetButtonDown("Jump")) {
-			rb.AddForce(new Vector2(0,8), ForceMode2D.Impulse);
-		}
-    }
+	//	if(!grounded && GetComponent<Rigidbody2D>().velocity.y == 0) {
+			//grounded = true;
+		//}
 
-    void OnTriggerEnter2D(Collider2D other)
+	}
+	
+	void OnTriggerEnter2D(Collider2D other)
     {
+		if (other.tag == "Ground") {
+
+			if (Input.GetButtonDown("Jump") /*&& grounded == true*/) {
+				Debug.Log("chao");
+				GetComponent<Rigidbody2D>().AddForce(transform.up*jumpPower);
+				//grounded = false;
+			}	
+		}
         if (other.tag == "EnemyWeak")
         {
             HealthManager.HurtPlayer(1);
