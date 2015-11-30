@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: BunnyWalk
+  m_Name: test
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -17,22 +17,22 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: {x: -4.78999996, y: -2, z: 0}
+        value: {x: -4.1500001, y: -2, z: 0}
         inSlope: {x: 0, y: 1.7647059, z: 0}
         outSlope: {x: 0, y: 1.7647059, z: 0}
         tangentMode: 0
       - time: .233333334
-        value: {x: -4.78999996, y: -1.52839398, z: 0}
+        value: {x: -4.1500001, y: -1.52839398, z: 0}
         inSlope: {x: 0, y: 1.08080566, z: 0}
         outSlope: {x: 0, y: 1.08080566, z: 0}
         tangentMode: 0
       - time: .283333331
-        value: {x: -4.78999996, y: -1.5, z: 0}
+        value: {x: -4.1500001, y: -1.5, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       - time: .566666663
-        value: {x: -4.78999996, y: -2, z: 0}
+        value: {x: -4.1500001, y: -2, z: 0}
         inSlope: {x: 0, y: -1.7647059, z: 0}
         outSlope: {x: 0, y: -1.7647059, z: 0}
         tangentMode: 0
@@ -143,17 +143,17 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: -4.78999996
+        value: -4.1500001
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       - time: .283333331
-        value: -4.78999996
+        value: -4.1500001
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       - time: .566666663
-        value: -4.78999996
+        value: -4.1500001
         inSlope: 0
         outSlope: 0
         tangentMode: 10

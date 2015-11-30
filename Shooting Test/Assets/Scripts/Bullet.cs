@@ -31,7 +31,7 @@ public class Bullet : MonoBehaviour {
         Vector3 currentPosition = transform.position;
 
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButton("Fire1"))
         {
 
             Vector3 moveToward = Camera.main.ScreenToWorldPoint(Input.mousePosition);
