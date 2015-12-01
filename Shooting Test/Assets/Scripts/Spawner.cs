@@ -1,9 +1,9 @@
 ﻿/* 
-Function used to spawn randomly monsters (can be as much monster as you want).
+Script used to spawn monsters randomly (can be as much monster as you want).
 Creator: Samuel Borges
-Collaborators:
+Collaborators: Iury Bizoni
 
-Date of last change: 10/20/2015
+Date of last change: 11/30/2015
 */
 
 using UnityEngine;
@@ -27,7 +27,13 @@ public class Spawner : MonoBehaviour
     IEnumerator SpawnObject(int index, float seconds)
     {
         yield return new WaitForSeconds(seconds);
-        Instantiate(enemies[index], new Vector3(transform.position.x, Random.Range(-yMax, yMax), transform.position.z), transform.rotation);
+        //check wether this script is attached to saquirrelspawn or not and based on that, spawn the respective enemy
+        if (gameObject.name == "squirrelspawn")
+        {
+            Instantiate(enemies[index], new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
+        }
+        else
+            Instantiate(enemies[index], new Vector3(transform.position.x, Random.Range(0, yMax), transform.position.z), transform.rotation);
 
         //We've spawned, so now we could start another spawn     
         isSpawning = false;

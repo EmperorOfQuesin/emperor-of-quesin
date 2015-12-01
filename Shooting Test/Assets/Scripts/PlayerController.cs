@@ -1,5 +1,5 @@
 ﻿/* 
-Function used to set player's config.
+Script used to set player's config.
 Creator: Samuel Borges
 Collaborators: Carla Cremon
 

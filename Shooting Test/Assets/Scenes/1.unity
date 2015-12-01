@@ -754,12 +754,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1299167810}
   - 212: {fileID: 1299167809}
-  - 50: {fileID: 1299167812}
   - 114: {fileID: 1299167811}
   - 58: {fileID: 1299167815}
-  - 60: {fileID: 1299167814}
   - 95: {fileID: 1299167808}
-  - 68: {fileID: 1299167813}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -836,106 +833,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpPower: 1000
---- !u!50 &1299167812
-Rigidbody2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1299167807}
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: .0500000007
-  m_GravityScale: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!68 &1299167813
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1299167807}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: -1}
-  m_Points:
-  - {x: -1.48386157, y: -.0645524263}
-  - {x: 1.48386097, y: -.0484142303}
---- !u!60 &1299167814
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1299167807}
-  m_Enabled: 0
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  m_Points:
-    m_Paths:
-    - - {x: .790000021, y: -1.10000002}
-      - {x: .839999974, y: -1.02999997}
-      - {x: .839999974, y: -.959999979}
-      - {x: .819999993, y: -.889999986}
-      - {x: .670000017, y: -.75999999}
-      - {x: .519999981, y: -.699999988}
-      - {x: .579999983, y: -.579999983}
-      - {x: .629999995, y: -.460000008}
-      - {x: .730000019, y: -.439999998}
-      - {x: .649999976, y: -.189999998}
-      - {x: .75, y: -.0399999991}
-      - {x: .779999971, y: .00999999978}
-      - {x: .800000012, y: .0599999987}
-      - {x: .75, y: .159999996}
-      - {x: .589999974, y: .0799999982}
-      - {x: .49000001, y: .159999996}
-      - {x: .49000001, y: .370000005}
-      - {x: .400000006, y: .610000014}
-      - {x: .419999987, y: .699999988}
-      - {x: .270000011, y: .779999971}
-      - {x: .129999995, y: .790000021}
-      - {x: .0799999982, y: .850000024}
-      - {x: -.0399999991, y: 1.03999996}
-      - {x: -.200000003, y: 1.19000006}
-      - {x: -.239999995, y: 1.20000005}
-      - {x: -.289999992, y: 1.20000005}
-      - {x: -.300000012, y: 1.19000006}
-      - {x: -.319999993, y: .949999988}
-      - {x: -.360000014, y: .930000007}
-      - {x: -.639999986, y: .980000019}
-      - {x: -.829999983, y: .99000001}
-      - {x: -.860000014, y: .980000019}
-      - {x: -.860000014, y: .939999998}
-      - {x: -.839999974, y: .879999995}
-      - {x: -.689999998, y: .720000029}
-      - {x: -.50999999, y: .600000024}
-      - {x: -.189999998, y: .540000021}
-      - {x: -.180000007, y: .419999987}
-      - {x: -.170000002, y: .389999986}
-      - {x: -.0799999982, y: .209999993}
-      - {x: -.189999998, y: .159999996}
-      - {x: -.349999994, y: .0299999993}
-      - {x: -.430000007, y: -.0299999993}
-      - {x: -.529999971, y: -.109999999}
-      - {x: -.550000012, y: -.150000006}
-      - {x: -.419999987, y: -.25}
-      - {x: -.550000012, y: -.360000014}
-      - {x: -.529999971, y: -.529999971}
-      - {x: -.430000007, y: -.649999976}
-      - {x: -.349999994, y: -.75999999}
-      - {x: -.280000001, y: -.959999979}
-      - {x: -.159999996, y: -1.07000005}
-      - {x: .170000002, y: -1.22000003}
-      - {x: .330000013, y: -1.22000003}
-      - {x: .419999987, y: -1.14999998}
-      - {x: .419999987, y: -1.08000004}
-      - {x: .600000024, y: -1.12}
 --- !u!58 &1299167815
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -948,7 +845,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.51999998
+  m_Radius: 1
 --- !u!1 &1414546475
 GameObject:
   m_ObjectHideFlags: 0
@@ -1148,6 +1045,49 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1513526425}
+--- !u!1 &1880583272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1880583274}
+  - 114: {fileID: 1880583273}
+  m_Layer: 0
+  m_Name: squirrelspawn
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1880583273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1880583272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f763c94c1b6920d478adb778e9001b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minTime: .200000003
+  maxTime: 1
+  enemies:
+  - {fileID: 187194, guid: 84048f91fbbf5f845b528bac18cc8aba, type: 2}
+--- !u!4 &1880583274
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1880583272}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.69999981, y: -1.41999996, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
 --- !u!1001 &2090556200
 Prefab:
   m_ObjectHideFlags: 0
