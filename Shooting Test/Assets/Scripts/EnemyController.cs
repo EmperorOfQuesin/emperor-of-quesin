@@ -11,6 +11,8 @@ using System.Collections;
 
 public class EnemyController : MonoBehaviour {
 
+    public GameObject deathParticle;
+
     public float enemySpeed;
 
     public Transform spawnPoint;
@@ -64,6 +66,7 @@ public class EnemyController : MonoBehaviour {
             if (isInvincible == false) //Destroy the enemy and the bullet if the enemy is not invincible
             {
                 Destroy(gameObject);
+                Instantiate(deathParticle, other.transform.position, other.transform.rotation);
                 Destroy(other.gameObject);
                 ScoreManager.AddPoints(pointsOnDeath);
             }

@@ -20,7 +20,7 @@ public class SquirrelController : MonoBehaviour
 
     public bool resistance = true;
 
-    private Color invincibleColor = new Color(0.8f, 0.3f, 0.3f);
+    //private Color invincibleColor = new Color(0.8f, 0.3f, 0.3f); (APAGAR)
 
     public int pointsOnDeath; //How many points a monster will give (Setup in Unity)
 
@@ -34,10 +34,12 @@ public class SquirrelController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       //////////////////////// LEMBRAR DE APAGAR ISSO SE NÃO FOR USAR!!!! ///////////////////////
+
 
         //The following Variables store the position from the player and from the enemies
-        float playerPos = GameObject.Find("Player").transform.position.y;
-        float enemyPos = GetComponent<Rigidbody2D>().position.y;
+        //float playerPos = GameObject.Find("Player").transform.position.y;
+        //float enemyPos = GetComponent<Rigidbody2D>().position.y;
 
         //checks if the enemy has reached the middle of the screen
         /*
