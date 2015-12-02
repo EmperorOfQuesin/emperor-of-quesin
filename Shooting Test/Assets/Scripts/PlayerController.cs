@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour {
         {
             timeSpentInvincible += Time.deltaTime;
 
-            if (timeSpentInvincible < 3f)
+            if (timeSpentInvincible < 1f)
             {
                 float remainder = timeSpentInvincible % .3f;
                 GetComponent<Renderer>().enabled = remainder > .15f;
