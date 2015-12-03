@@ -30,6 +30,7 @@ public class ScoreManager : MonoBehaviour
             score = 0;
 
         text.text = "" + score;
+
     }
 
     public static void AddPoints(int pointsToAdd)
