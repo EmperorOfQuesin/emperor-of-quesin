@@ -22,6 +22,7 @@ public class ScoreManager : MonoBehaviour
         text = GetComponent<Text>();
 
         score = 0;
+
     }
 
     void Update()
@@ -30,6 +31,11 @@ public class ScoreManager : MonoBehaviour
             score = 0;
 
         text.text = "" + score;
+
+        if (score == 2)
+        {
+            GetComponent<Spawner>().ResetTime();
+        }
     }
 
     public static void AddPoints(int pointsToAdd)
@@ -41,5 +47,4 @@ public class ScoreManager : MonoBehaviour
     {
         score = 0;
     }
-
 }

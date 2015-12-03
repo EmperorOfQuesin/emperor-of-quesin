@@ -49,4 +49,10 @@ public class Spawner : MonoBehaviour
             StartCoroutine(SpawnObject(enemyIndex, Random.Range(minTime, maxTime)));
         }
     }
+
+    public void ResetTime()
+    {
+        minTime = 0;
+        maxTime = 0;
+    }
 }
