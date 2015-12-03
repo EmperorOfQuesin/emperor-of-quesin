@@ -25,8 +25,10 @@ public class EnemyController : MonoBehaviour {
 
     public int pointsOnDeath; //How many points a monster will give (Setup in Unity)
 
-	// Use this for initialization
-	void Start () {
+    //public AudioSource deathEffect;
+
+    // Use this for initialization
+    void Start () {
         GetComponent<Rigidbody2D>().velocity = new Vector2(enemySpeed, 0);
         spawnPoint = GameObject.Find("SpawnPoint").transform;
 	}
@@ -66,6 +68,7 @@ public class EnemyController : MonoBehaviour {
             if (isInvincible == false) //Destroy the enemy and the bullet if the enemy is not invincible
             {
                 Destroy(gameObject);
+                //deathEffect.Play();
                 Instantiate(deathParticle, other.transform.position, other.transform.rotation);
                 Destroy(other.gameObject);
                 ScoreManager.AddPoints(pointsOnDeath);
