@@ -32,10 +32,13 @@ public class ScoreManager : MonoBehaviour
 
         text.text = "" + score;
 
+<<<<<<< HEAD
         if (score == 2)
         {
             GetComponent<Spawner>().ResetTime();
         }
+=======
+>>>>>>> acb60be80060f796fa2537d6acaca49b6fa30c99
     }
 
     public static void AddPoints(int pointsToAdd)
