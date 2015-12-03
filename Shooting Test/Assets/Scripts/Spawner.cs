@@ -3,7 +3,7 @@ Script used to spawn monsters randomly (can be as much monster as you want).
 Creator: Samuel Borges
 Collaborators: Iury Bizoni
 
-Date of last change: 11/30/2015
+Date of last change: 12/03/2015
 */
 
 using UnityEngine;
@@ -17,6 +17,7 @@ public class Spawner : MonoBehaviour
     public float maxTime = 15.0f;
     public GameObject[] enemies;  // Array of enemy prefabs.
     float yMax;
+    public bool spawn = true;
 
 
     void Start()
@@ -26,23 +27,26 @@ public class Spawner : MonoBehaviour
 
     IEnumerator SpawnObject(int index, float seconds)
     {
-        yield return new WaitForSeconds(seconds);
-        //check wether this script is attached to saquirrelspawn or not and based on that, spawn the respective enemy
-        if (gameObject.name == "squirrelspawn")
+        if (spawn)
         {
-            Instantiate(enemies[index], new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
-        }
-        else
-            Instantiate(enemies[index], new Vector3(transform.position.x, Random.Range(0, yMax), transform.position.z), transform.rotation);
+            yield return new WaitForSeconds(seconds);
+            //check wether this script is attached to saquirrelspawn or not and based on that, spawn the respective enemy
+            if (gameObject.name == "squirrelspawn")
+            {
+                Instantiate(enemies[index], new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
+            }
+            else
+                Instantiate(enemies[index], new Vector3(transform.position.x, Random.Range(0, yMax), transform.position.z), transform.rotation);
 
-        //We've spawned, so now we could start another spawn     
-        isSpawning = false;
+            //We've spawned, so now we could start another spawn     
+            isSpawning = false;
+        }
     }
 
     void Update()
     {
         //We only want to spawn one at a time, so make sure we're not already making that call
-        if (!isSpawning)
+        if (!isSpawning && spawn)
         {
             isSpawning = true; //Yep, we're going to spawn
             int enemyIndex = Random.Range(0, enemies.Length);
@@ -52,7 +56,6 @@ public class Spawner : MonoBehaviour
 
     public void ResetTime()
     {
-        minTime = 0;
-        maxTime = 0;
+        spawn = false;
     }
 }

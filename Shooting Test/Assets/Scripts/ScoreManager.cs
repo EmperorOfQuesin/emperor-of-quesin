@@ -3,7 +3,7 @@ Function used to change scores at the screen.
 Creator: Samuel Borges
 Collaborators:
 
-Date of last change: 10/20/2015
+Date of last change: 12/03/2015
 */
 
 using UnityEngine;
@@ -17,8 +17,11 @@ public class ScoreManager : MonoBehaviour
 
     Text text;
 
+    public Spawner scoreToEnd;
+
     void Start()
     {
+        scoreToEnd = FindObjectOfType<Spawner>();
         text = GetComponent<Text>();
 
         score = 0;
@@ -32,13 +35,10 @@ public class ScoreManager : MonoBehaviour
 
         text.text = "" + score;
 
-<<<<<<< HEAD
         if (score == 2)
         {
-            GetComponent<Spawner>().ResetTime();
+            scoreToEnd.ResetTime();
         }
-=======
->>>>>>> acb60be80060f796fa2537d6acaca49b6fa30c99
     }
 
     public static void AddPoints(int pointsToAdd)
