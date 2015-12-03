@@ -39,7 +39,7 @@ public class EnemyController : MonoBehaviour {
         float enemyPos = GetComponent<Rigidbody2D>().position.y;
 
         //checks if the enemy has reached the middle of the screen
-        if (GetComponent<Rigidbody2D>().position.x <= 0)
+        if (GetComponent<Rigidbody2D>().position.x <= -1)
         {
 
             //at this point the enemy becomes invincible and its color is changed

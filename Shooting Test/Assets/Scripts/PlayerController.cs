@@ -32,6 +32,10 @@ public class PlayerController : MonoBehaviour {
         //	if(!grounded && GetComponent<Rigidbody2D>().velocity.y == 0) {
         //grounded = true;
         //}
+        if (transform.position.y >= -2 && transform.position.y <= 1.9 && Input.GetButtonDown("Jump"))
+            GetComponent<Animator>().SetBool("isGrounded", true);
+        else
+            GetComponent<Animator>().SetBool("isGrounded", false);
 
         if (isInvincible)
         {
