@@ -1,6 +1,6 @@
 ﻿/* 
 Script used to controll the squirrel.
-Creator: Samuel Borges
+Creator: Iury Bizoni
 Collaborators:
 
 Date of last change: 11/30/2015

@@ -18,7 +18,8 @@ public class Spawner : MonoBehaviour
     public GameObject[] enemies;  // Array of enemy prefabs.
     float yMax;
     public bool spawn = true;
-
+    public int teste = 0;
+    public int teste1 = 0;
 
     void Start()
     {
@@ -35,9 +36,10 @@ public class Spawner : MonoBehaviour
             {
                 Instantiate(enemies[index], new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
             }
-            else
+            else if(gameObject.name == "SpawnPoint")
+            {
                 Instantiate(enemies[index], new Vector3(transform.position.x, Random.Range(0, yMax), transform.position.z), transform.rotation);
-
+            }
             //We've spawned, so now we could start another spawn     
             isSpawning = false;
         }

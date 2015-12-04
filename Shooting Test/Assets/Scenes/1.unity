@@ -658,7 +658,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: ef78148585600934dbb67d80009d74fd, type: 2}
+  - {fileID: 2100000, guid: fd0c0b7fef84efc41893f459d2787707, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -666,7 +666,9 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -827,7 +829,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -916,6 +920,9 @@ MonoBehaviour:
   maxTime: 4
   enemies:
   - {fileID: 112100, guid: 87cb049b2dfc3b84c808946dcc761b4e, type: 2}
+  spawn: 1
+  teste: 0
+  teste1: 0
 --- !u!1 &1493468247
 GameObject:
   m_ObjectHideFlags: 0
@@ -1034,6 +1041,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e16db00ae1f4d314c8c874bb3469f007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreToEndsquirrel: {fileID: 0}
+  scoreToEndbat: {fileID: 0}
+  bossTrigger: {fileID: 0}
 --- !u!114 &1513526428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1103,6 +1113,9 @@ MonoBehaviour:
   maxTime: 9
   enemies:
   - {fileID: 187194, guid: 84048f91fbbf5f845b528bac18cc8aba, type: 2}
+  spawn: 1
+  teste: 0
+  teste1: 0
 --- !u!4 &1880583274
 Transform:
   m_ObjectHideFlags: 0
@@ -1168,7 +1181,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}

@@ -3,7 +3,7 @@ Script used to set player's config.
 Creator: Samuel Borges
 Collaborators: Carla Cremon, Iury Bizoni
 
-Date of last change: 12/01/2015
+Date of last change: 12/03/2015
 */
 
 using UnityEngine;
@@ -54,17 +54,17 @@ public class PlayerController : MonoBehaviour {
         }
 
     }
-
+    
     void OnTriggerEnter2D(Collider2D other)
-    {
+    {/* //////////////////////         APAGAR         //////////////////////////
 		if (other.tag == "Ground")
         {
-			if (Input.GetButtonDown("Jump") /*&& grounded == true*/) {
+			if (Input.GetButtonDown("Jump") /*&& grounded == true) {
 				Debug.Log("chao");
 				GetComponent<Rigidbody2D>().AddForce(transform.up*jumpPower);
 				//grounded = false;
 			}	
-		}
+		}*/
         if (!isInvincible && other.tag == "EnemyWeak")
         {
             HealthManager.HurtPlayer(1);

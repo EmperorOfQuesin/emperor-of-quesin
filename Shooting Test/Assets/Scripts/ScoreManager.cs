@@ -1,7 +1,7 @@
 ﻿/* 
 Function used to change scores at the screen.
 Creator: Samuel Borges
-Collaborators:
+Collaborators: Iury Bizoni
 
 Date of last change: 12/03/2015
 */
@@ -17,11 +17,16 @@ public class ScoreManager : MonoBehaviour
 
     Text text;
 
-    public Spawner scoreToEnd;
+    public Spawner scoreToEndsquirrel;
+    public Spawner scoreToEndbat;
+
+    public BossController bossTrigger;
 
     void Start()
     {
-        scoreToEnd = FindObjectOfType<Spawner>();
+        scoreToEndbat = GameObject.Find("SpawnPoint").GetComponent<Spawner>();
+        scoreToEndsquirrel = GameObject.Find("squirrelspawn").GetComponent<Spawner>();
+        bossTrigger = GameObject.FindObjectOfType<BossController>();
         text = GetComponent<Text>();
 
         score = 0;
@@ -35,9 +40,11 @@ public class ScoreManager : MonoBehaviour
 
         text.text = "" + score;
 
-        if (score == 2)
+        if (score >= 20)
         {
-            scoreToEnd.ResetTime();
+            scoreToEndbat.ResetTime();
+            scoreToEndsquirrel.ResetTime();
+            bossTrigger.BossIsHere();
         }
     }
 
