@@ -1,5 +1,5 @@
 ﻿/* 
-Script used to set player's config.
+Script used to destroy particle effects.
 Creator: Samuel Borges
 Collaborators: 
 

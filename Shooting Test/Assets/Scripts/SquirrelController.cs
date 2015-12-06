@@ -12,6 +12,8 @@ using System.Collections;
 public class SquirrelController : MonoBehaviour
 {
 
+    public GameObject deathParticle;
+
     public float enemySpeed;
 
     public Transform spawnPoint;
@@ -70,6 +72,7 @@ public class SquirrelController : MonoBehaviour
             if (resistance == false) //Destroy the enemy and the bullet if the enemy is not invincible
             {
                 Destroy(gameObject);
+                Instantiate(deathParticle, other.transform.position, other.transform.rotation); 
                 Destroy(other.gameObject);
                 ScoreManager.AddPoints(pointsOnDeath);
                 resistance = true;

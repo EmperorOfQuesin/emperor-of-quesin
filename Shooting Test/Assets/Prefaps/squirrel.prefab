@@ -89,6 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 944f6c002aa5efe428bd012ae4012e05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathParticle: {fileID: 187114, guid: c8027523727849a4e8ffe6de119ec896, type: 2}
   enemySpeed: -3
   spawnPoint: {fileID: 0}
   enemy: {fileID: 0}
