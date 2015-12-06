@@ -60,4 +60,10 @@ public class Spawner : MonoBehaviour
     {
         spawn = false;
     }
+
+    public void ChangeRadius()
+    {
+        minTime = 1;
+        maxTime = 3;
+    }
 }

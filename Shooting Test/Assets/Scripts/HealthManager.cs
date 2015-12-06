@@ -3,7 +3,7 @@ Function used to manipulate player's health.
 Creator: Samuel Borges
 Collaborators:
 
-Date of last change: 10/20/2015
+Date of last change: 12/05/2015
 */
 
 using UnityEngine;
@@ -12,6 +12,9 @@ using UnityEngine.UI;
 
 public class HealthManager : MonoBehaviour
 {
+
+    public Sprite[] HeartSprites;
+    public Image HeartUI;
 
     public int maxPlayerHealth;
     public static int playerHealth;
@@ -23,6 +26,7 @@ public class HealthManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+
         text = GetComponent<Text>();
 
         playerHealth = maxPlayerHealth;
@@ -33,11 +37,19 @@ public class HealthManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        HeartUI.sprite = HeartSprites[playerHealth];
+
+        if (playerHealth == 6)
+        {
+
+        }
+
         if (playerHealth <= 0 && isDead == false)
         {
             playerHealth = 0;
             RespawnPlayer();
-            FullHealth();
+            FullHealth();   
             isDead = true;
         }
 

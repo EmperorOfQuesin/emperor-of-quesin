@@ -8,6 +8,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/1.unity
   - enabled: 1
-    path: Assets/Scenes/LauchScene.unity
+    path: Assets/Scenes/LaunchScene.unity
   - enabled: 1
     path: Assets/Scenes/LoseScene.unity
+  - enabled: 1
+    path: Assets/Scenes/InstructionScene.unity
