@@ -34,9 +34,10 @@ public class SquirrelController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-       //////////////////////// LEMBRAR DE APAGAR ISSO SE NÃO FOR USAR!!!! ///////////////////////
+        GetComponent<Animator>().SetBool("squirrelHurt", false);
+        //////////////////////// LEMBRAR DE APAGAR ISSO SE NÃO FOR USAR!!!! ///////////////////////
 
 
         //The following Variables store the position from the player and from the enemies
@@ -78,6 +79,7 @@ public class SquirrelController : MonoBehaviour
                 resistance = true;
             }
             Destroy(other.gameObject);
+            GetComponent<Animator>().SetBool("squirrelHurt", true);
             resistance = false;
         }
     }

@@ -72,5 +72,6 @@ public class PlayerController : MonoBehaviour {
             isInvincible = true;
             timeSpentInvincible = 0;
         }
+
     }
 }
