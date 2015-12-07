@@ -27,30 +27,20 @@ public class Bullet : MonoBehaviour {
     void Start()
     {
         moveDirection = Vector3.right;
-       // for (index = 0; index < 5; index++)
-            //ammunition[index] = (GameObject)Instantiate(bullet, new Vector3(Camera.main.aspect * Camera.main.orthographicSize + 1, Camera.main.orthographicSize + index), firePosition.rotation);
-            //ammunition[index] = (GameObject)Instantiate(bullet, new Vector3(-6, index), firePosition.rotation);
     }
-    /*
-        IEnumerator Reload(float reloadbullet)
-        {
-            yield return new WaitForSeconds(reloadbullet);
-            bullets++;
-            if (bullets >= 5)
-                bullets = 5;
-        }*/
 
     void Update()
     {
         Debug.Log(bullets);
         Vector3 currentPosition = transform.position;
-        //  StartCoroutine(Reload(1f));
         time++;
+
         if (time % 50 == 0 && bullets < 5)
         {
             bullets++;
             BulletsManager.Reload(1);
         }
+
         if (bullets > 0)
         {
             if (Input.GetButtonDown("Fire1"))

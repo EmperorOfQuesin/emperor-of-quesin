@@ -3,7 +3,7 @@ Function used to controll when the boss spawns.
 Creator: Iury Bizoni
 Collaborators: Samuel Borges
 
-Date of last change: 12/05/2015
+Date of last change: 12/07/2015
 */
 using UnityEngine;
 using System.Collections;
@@ -11,6 +11,8 @@ using System.Collections;
 public class BossController : MonoBehaviour {
 
     ToBeContinued toBeContinued;
+
+    public AudioSource bossAudio1;
 
     // Use this for initialization
     void Start() {
@@ -26,7 +28,13 @@ public class BossController : MonoBehaviour {
     public void BossIsHere()
     {
         GetComponent<Animator>().SetBool("bossFlag", true);
+        Invoke("PlayBossSound", 5);
         ToBeContinuedAppears();
+    }
+
+    public void PlayBossSound()
+    {
+        gameObject.GetComponent<AudioSource>().enabled = true;
     }
 
     public void ToBeContinuedAppears()

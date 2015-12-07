@@ -55,7 +55,7 @@ public class ScoreManager : MonoBehaviour
             scoreMiddleSquirrel.ChangeRadius();
         }
 
-        if (score >= 20)
+        if (score >= 5)
         {
             scoreToEndbat.ResetTime();
             scoreToEndsquirrel.ResetTime();

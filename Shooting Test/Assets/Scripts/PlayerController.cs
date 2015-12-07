@@ -3,7 +3,7 @@ Script used to set player's config.
 Creator: Samuel Borges
 Collaborators: Carla Cremon, Iury Bizoni
 
-Date of last change: 12/03/2015
+Date of last change: 12/07/2015
 */
 
 using UnityEngine;
@@ -11,9 +11,8 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
+    public AudioSource hurtEffectSound;
 
-    //Rigidbody2D rb;
-    //public bool grounded = true;
     public float jumpPower = 400;
 
     private bool isInvincible = false;
@@ -21,17 +20,14 @@ public class PlayerController : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
-        //rb = GetComponent<Rigidbody2D>();
+
     }
 
     // Update is called once per frame
     void FixedUpdate() {
 
         GetComponent<Animator>().SetBool("isHurt", false);
-        //makes player jump when "space" is pressed"
-        //	if(!grounded && GetComponent<Rigidbody2D>().velocity.y == 0) {
-        //grounded = true;
-        //}
+
         if (transform.position.y >= -2 && transform.position.y <= 1.9 && Input.GetButtonDown("Jump"))
             GetComponent<Animator>().SetBool("isGrounded", true);
         else
@@ -56,21 +52,13 @@ public class PlayerController : MonoBehaviour {
     }
     
     void OnTriggerEnter2D(Collider2D other)
-    {/* //////////////////////         APAGAR         //////////////////////////
-		if (other.tag == "Ground")
-        {
-			if (Input.GetButtonDown("Jump") /*&& grounded == true) {
-				Debug.Log("chao");
-				GetComponent<Rigidbody2D>().AddForce(transform.up*jumpPower);
-				//grounded = false;
-			}	
-		}*/
+    {
         if (!isInvincible && other.tag == "EnemyWeak")
         {
             HealthManager.HurtPlayer(1);
-            //GetComponent<Animator>().SetBool("isHurt", true);
             isInvincible = true;
             timeSpentInvincible = 0;
+            hurtEffectSound.Play();
         }
 
     }

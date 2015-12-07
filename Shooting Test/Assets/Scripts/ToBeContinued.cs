@@ -28,5 +28,6 @@ public class ToBeContinued : MonoBehaviour {
     public void ToBeContinuedRenderer()
     {
         rend.enabled = true;
+        gameObject.GetComponent<AudioSource>().enabled = true;
     }
 }

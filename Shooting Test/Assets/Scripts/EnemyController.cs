@@ -3,7 +3,7 @@ Script used to controll the bat.
 Creator: Samuel Borges
 Collaborators: Iury Bizoni
 
-Date of last change: 11/30/2015
+Date of last change: 12/07/2015
 */
 
 using UnityEngine;
@@ -68,7 +68,6 @@ public class EnemyController : MonoBehaviour {
             if (isInvincible == false) //Destroy the enemy and the bullet if the enemy is not invincible
             {
                 Destroy(gameObject);
-                //deathEffect.Play();
                 Instantiate(deathParticle, other.transform.position, other.transform.rotation);
                 Destroy(other.gameObject);
                 ScoreManager.AddPoints(pointsOnDeath);
