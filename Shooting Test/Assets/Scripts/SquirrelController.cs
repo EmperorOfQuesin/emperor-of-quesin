@@ -1,9 +1,9 @@
 ﻿/* 
-Script used to controll the squirrel.
+Script used to control the squirrel.
 Creator: Iury Bizoni
 Collaborators:
 
-Date of last change: 11/30/2015
+Date of last change: 12/06/2015
 */
 
 using UnityEngine;
@@ -22,7 +22,6 @@ public class SquirrelController : MonoBehaviour
 
     public bool resistance = true;
 
-    //private Color invincibleColor = new Color(0.8f, 0.3f, 0.3f); (APAGAR)
 
     public int pointsOnDeath; //How many points a monster will give (Setup in Unity)
 
@@ -37,32 +36,6 @@ public class SquirrelController : MonoBehaviour
     void FixedUpdate()
     {
         GetComponent<Animator>().SetBool("squirrelHurt", false);
-        //////////////////////// LEMBRAR DE APAGAR ISSO SE NÃO FOR USAR!!!! ///////////////////////
-
-
-        //The following Variables store the position from the player and from the enemies
-        //float playerPos = GameObject.Find("Player").transform.position.y;
-        //float enemyPos = GetComponent<Rigidbody2D>().position.y;
-
-        //checks if the enemy has reached the middle of the screen
-        /*
-        if (GetComponent<Rigidbody2D>().position.x <= 0)
-        {
-
-            //at this point the enemy becomes invincible and its color is changed
-            isInvincible = true;
-            GetComponent<SpriteRenderer>().color = invincibleColor;
-
-            /*
-            //if the enemy is above the player it will go down, the further it's from the player, the higher its speed will be
-            if (playerPos < enemyPos)
-                GetComponent<Rigidbody2D>().velocity = new Vector2(enemySpeed, 2.0f * (playerPos - enemyPos));
-            //the same as the previous if, but this time it will go up if the enemy is below the player
-            else if (playerPos > enemyPos)
-                GetComponent<Rigidbody2D>().velocity = new Vector2(enemySpeed, 2.0f * (playerPos - enemyPos));
-    
-        }
-    */
     }
 
     void OnTriggerEnter2D(Collider2D other)

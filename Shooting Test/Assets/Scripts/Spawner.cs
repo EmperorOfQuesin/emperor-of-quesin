@@ -31,7 +31,7 @@ public class Spawner : MonoBehaviour
         if (spawn)
         {
             yield return new WaitForSeconds(seconds);
-            //check wether this script is attached to saquirrelspawn or not and based on that, spawn the respective enemy
+            //check whether this script is attached to saquirrelspawn or not and based on that, spawn the respective enemy
             if (gameObject.name == "squirrelspawn")
             {
                 Instantiate(enemies[index], new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
