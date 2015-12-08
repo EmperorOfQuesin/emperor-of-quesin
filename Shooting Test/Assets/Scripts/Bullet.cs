@@ -31,7 +31,7 @@ public class Bullet : MonoBehaviour {
 
     void Update()
     {
-        Debug.Log(bullets);
+        //Debug.Log(bullets);
         Vector3 currentPosition = transform.position;
         time++;
 

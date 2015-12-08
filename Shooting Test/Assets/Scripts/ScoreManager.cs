@@ -25,6 +25,10 @@ public class ScoreManager : MonoBehaviour
 
     public BossController bossTrigger;
 
+    public BackgroundScroller backgroundScroller;
+
+    public FasterSound fasterSound;
+
     void Start()
     {
         scoreMiddleBat = GameObject.Find("SpawnPoint").GetComponent<Spawner>();
@@ -34,6 +38,10 @@ public class ScoreManager : MonoBehaviour
         scoreToEndsquirrel = GameObject.Find("squirrelspawn").GetComponent<Spawner>();
 
         bossTrigger = GameObject.FindObjectOfType<BossController>();
+
+        backgroundScroller = GameObject.FindObjectOfType<BackgroundScroller>();
+
+        fasterSound = GameObject.FindObjectOfType<FasterSound>();
 
         text = GetComponent<Text>();
 
@@ -49,13 +57,15 @@ public class ScoreManager : MonoBehaviour
 
         text.text = "" + score;
 
-        if (score == 10)
+        if (score == 5)
         {
+            backgroundScroller.StopSound();
             scoreMiddleBat.ChangeRadius();
             scoreMiddleSquirrel.ChangeRadius();
+            fasterSound.StartFasterSound();
         }
 
-        if (score >= 5)
+        if (score >= 10)
         {
             scoreToEndbat.ResetTime();
             scoreToEndsquirrel.ResetTime();

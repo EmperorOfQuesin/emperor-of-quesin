@@ -1,9 +1,9 @@
 ﻿/* 
 Function used to scroll the background.
 Creator: Iury Bizoni
-Collaborators:
+Collaborators: Samuel Borges
 
-Date of last change: 10/15/2015
+Date of last change: 12/07/2015
 */
 
 using UnityEngine;
@@ -22,5 +22,10 @@ public class BackgroundScroller : MonoBehaviour
     {
         Vector2 offset = new Vector2(Time.time * scrollSpeed, 0);
         GetComponent<Renderer>().material.mainTextureOffset = offset;
+    }
+
+    public void StopSound()
+    {
+        gameObject.GetComponent<AudioSource>().enabled = false;
     }
 }
