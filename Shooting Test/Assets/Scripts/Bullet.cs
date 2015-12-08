@@ -3,7 +3,7 @@ Function used to instantiate and change bullet's position.
 Creator: Samuel Borges
 Collaborators: Iury Bizoni
 
-Date of last change: 12/06/2015
+Date of last change: 12/08/2015
 */
 
 using UnityEngine;
@@ -20,6 +20,7 @@ public class Bullet : MonoBehaviour {
     GameObject[] ammunition;
     private int index;
 
+    public bool pauseShoot = true;
 
     private Vector3 moveDirection;
 
@@ -31,32 +32,46 @@ public class Bullet : MonoBehaviour {
 
     void Update()
     {
-        //Debug.Log(bullets);
         Vector3 currentPosition = transform.position;
         time++;
-
-        if (time % 50 == 0 && bullets < 5)
+        if (pauseShoot)
         {
-            bullets++;
-            BulletsManager.Reload(1);
-        }
-
-        if (bullets > 0)
-        {
-            if (Input.GetButtonDown("Fire1"))
+            if (time % 50 == 0 && bullets < 5)
             {
-
-                Vector3 moveToward = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-                moveDirection = moveToward - currentPosition;
-                moveDirection.z = 0;
-                moveDirection.Normalize();
-
-                GameObject projectile = (GameObject)Instantiate(bullet, firePosition.position, firePosition.rotation);
-                projectile.GetComponent<Rigidbody2D>().velocity = moveDirection * speed;
-                bullets--;
-                BulletsManager.PlayerShot(1);
+                bullets++;
+                BulletsManager.Reload(1);
             }
         }
+
+        if (pauseShoot)
+        {
+            if (bullets > 0)
+            {
+                if (Input.GetButtonDown("Fire1"))
+                {
+
+                    Vector3 moveToward = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+                    moveDirection = moveToward - currentPosition;
+                    moveDirection.z = 0;
+                    moveDirection.Normalize();
+
+                    GameObject projectile = (GameObject)Instantiate(bullet, firePosition.position, firePosition.rotation);
+                    projectile.GetComponent<Rigidbody2D>().velocity = moveDirection * speed;
+                    bullets--;
+                    BulletsManager.PlayerShot(1);
+                }
+            }
+        }
+    }
+
+    public void PauseShoot()
+    {
+        pauseShoot = false;
+    }
+
+    public void ResumeShoot()
+    {
+        pauseShoot = true;
     }
 }

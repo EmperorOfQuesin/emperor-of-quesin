@@ -3,13 +3,20 @@ using System.Collections;
 
 public class PauseMenu : MonoBehaviour {
 
-    public string levelSelect;
+    //public string levelSelect;
     public string mainMenu;
 
     public bool isPaused;
 
     public GameObject pauseMenuCanvas;
+
+    public Bullet bullet;
 	
+    void Start()
+    {
+        bullet = FindObjectOfType<Bullet>();
+    }
+
 	// Update is called once per frame
 	void Update () {
 
@@ -22,10 +29,12 @@ public class PauseMenu : MonoBehaviour {
         {
             pauseMenuCanvas.SetActive(false);
             Time.timeScale = 1f;
+            bullet.ResumeShoot();
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            bullet.PauseShoot();
             isPaused = !isPaused;
         }
 	}
@@ -33,15 +42,16 @@ public class PauseMenu : MonoBehaviour {
     public void Resume()
     {
         isPaused = false;
+        bullet.ResumeShoot();
     }
 
     public void LevelSelect()
     {
-        Application.LoadLevel("LaunchScene");
+       
     }
 
     public void Quit()
     {
-
+        Application.LoadLevel("LaunchScene");
     }
 }
