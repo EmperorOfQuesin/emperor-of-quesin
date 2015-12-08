@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿/*
+Script used to manage the title screen
+Creator: Samuel Borges
+Colaborator: Iury Bizoni
+
+Date of last change: 12/08/2015
+*/
+using UnityEngine;
 using System.Collections;
 
 public class MainMenu : MonoBehaviour
@@ -10,7 +17,7 @@ public class MainMenu : MonoBehaviour
 
     void Start()
     {
-
+        Time.timeScale = 1f;
     }
 
     // Update is called once per frame
