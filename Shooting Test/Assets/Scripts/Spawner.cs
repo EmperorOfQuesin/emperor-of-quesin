@@ -63,13 +63,13 @@ public class Spawner : MonoBehaviour
 
     public void ChangeRadiusBat()
     {
-        minTime = 0.5f;
+        minTime = 1;
         maxTime = 3;
     }
 
     public void ChangeRadiusSquirrel()
     {
         minTime = 1;
-        maxTime = 3;
+        maxTime = 4.5f;
     }
 }

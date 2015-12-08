@@ -59,7 +59,7 @@ public class ScoreManager : MonoBehaviour
 
         text.text = "" + score;
 
-        if (score == 2)
+        if (score == 30)
         {
             backgroundScroller.StopSound();
             scoreMiddleBat.ChangeRadiusBat();
@@ -69,7 +69,7 @@ public class ScoreManager : MonoBehaviour
             //backgroundScroller.ChangeVelocityBackground();
         }
 
-        if (score >= 30)
+        if (score >= 50)
         {
             scoreToEndbat.ResetTime();
             scoreToEndsquirrel.ResetTime();
