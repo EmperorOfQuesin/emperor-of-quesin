@@ -28,4 +28,9 @@ public class BackgroundScroller : MonoBehaviour
     {
         gameObject.GetComponent<AudioSource>().enabled = false;
     }
+
+    public void ChangeVelocityBackground()
+    {
+        scrollSpeed = 0.18f;
+    }
 }

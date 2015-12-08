@@ -28,6 +28,7 @@ public class ScoreManager : MonoBehaviour
     public BackgroundScroller backgroundScroller;
 
     public FasterSound fasterSound;
+    public ChangeRadiusSound changeRadiusSound;
 
     void Start()
     {
@@ -42,6 +43,7 @@ public class ScoreManager : MonoBehaviour
         backgroundScroller = GameObject.FindObjectOfType<BackgroundScroller>();
 
         fasterSound = GameObject.FindObjectOfType<FasterSound>();
+        changeRadiusSound = GameObject.FindObjectOfType<ChangeRadiusSound>();
 
         text = GetComponent<Text>();
 
@@ -63,6 +65,8 @@ public class ScoreManager : MonoBehaviour
             scoreMiddleBat.ChangeRadius();
             scoreMiddleSquirrel.ChangeRadius();
             fasterSound.StartFasterSound();
+            changeRadiusSound.ChangeRadiusSong();
+            backgroundScroller.ChangeVelocityBackground();
         }
 
         if (score >= 10)
