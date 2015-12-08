@@ -3,7 +3,7 @@ Script used to manage the start button interaction
 Creator: Iury Bizoni
 Colaborator: Samuel Borges
 
-Date of last change: 10/20/2015
+Date of last change: 12/08/2015
 */
 
 using UnityEngine;
@@ -22,13 +22,25 @@ public class StartScene : MonoBehaviour {
 	}
 
     //When clicked the startbutton will load the next scene, starting the game
-    void OnMouseDown()
+    //void OnMouseDown()
+    //{
+    //    Invoke("LoadLevel", 0);
+    //}
+
+    
+
+    public void InstructionLevel()
     {
-        Invoke("LoadLevel", 0);
+        Application.LoadLevel("InstructionScene");
     }
 
     public void LoadLevel()
     {
         Application.LoadLevel("1");
+    }
+
+    public void Credits()
+    {
+        //Application.LoadLevel("Credits");
     }
 }

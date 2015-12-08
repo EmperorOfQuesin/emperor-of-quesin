@@ -1,9 +1,16 @@
-﻿using UnityEngine;
+﻿/*
+Script used to manage Pause Menu interaction.
+Creator: Samuel Borges
+Colaborator:
+
+Date of last change: 12/08/2015
+*/
+
+using UnityEngine;
 using System.Collections;
 
 public class PauseMenu : MonoBehaviour {
 
-    //public string levelSelect;
     public string mainMenu;
 
     public bool isPaused;
@@ -43,11 +50,6 @@ public class PauseMenu : MonoBehaviour {
     {
         isPaused = false;
         bullet.ResumeShoot();
-    }
-
-    public void LevelSelect()
-    {
-       
     }
 
     public void Quit()

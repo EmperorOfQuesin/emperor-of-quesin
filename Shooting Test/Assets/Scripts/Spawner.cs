@@ -3,7 +3,7 @@ Script used to spawn monsters randomly (can be as much monster as you want).
 Creator: Samuel Borges
 Collaborators: Iury Bizoni
 
-Date of last change: 12/03/2015
+Date of last change: 12/08/2015
 */
 
 using UnityEngine;

@@ -3,7 +3,7 @@ Function used to change scores at the screen.
 Creator: Samuel Borges
 Collaborators: Iury Bizoni
 
-Date of last change: 12/03/2015
+Date of last change: 12/08/2015
 */
 
 using UnityEngine;
@@ -59,17 +59,17 @@ public class ScoreManager : MonoBehaviour
 
         text.text = "" + score;
 
-        if (score == 5)
+        if (score == 15)
         {
             backgroundScroller.StopSound();
             scoreMiddleBat.ChangeRadius();
             scoreMiddleSquirrel.ChangeRadius();
             fasterSound.StartFasterSound();
             changeRadiusSound.ChangeRadiusSong();
-            backgroundScroller.ChangeVelocityBackground();
+            //backgroundScroller.ChangeVelocityBackground();
         }
 
-        if (score >= 10)
+        if (score >= 30)
         {
             scoreToEndbat.ResetTime();
             scoreToEndsquirrel.ResetTime();

@@ -3,7 +3,7 @@ Script used to set player's config.
 Creator: Samuel Borges
 Collaborators: Carla Cremon, Iury Bizoni
 
-Date of last change: 12/07/2015
+Date of last change: 12/08/2015
 */
 
 using UnityEngine;
