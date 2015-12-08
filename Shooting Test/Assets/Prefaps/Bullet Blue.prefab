@@ -15,7 +15,7 @@ GameObject:
   - 114: {fileID: 11441740}
   - 82: {fileID: 8240172}
   m_Layer: 0
-  m_Name: Shuriken
+  m_Name: Bullet Blue
   m_TagString: Shuriken
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -186,7 +186,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 47644fe45a8024f02aee0c0684d94064, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 24122e8390bba8e43a49118fc9bb5b37, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
@@ -226,7 +226,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 47644fe45a8024f02aee0c0684d94064,
+      objectReference: {fileID: 21300000, guid: 24122e8390bba8e43a49118fc9bb5b37,
         type: 3}
     - target: {fileID: 0}
       propertyPath: m_Volume

@@ -11,7 +11,7 @@ using System.Collections;
 
 public class Bullet : MonoBehaviour {
 
-    public GameObject bullet;
+    public GameObject[] bullet;
     public float speed;
     public Transform firePosition;
     GameObject prefab;
@@ -56,7 +56,7 @@ public class Bullet : MonoBehaviour {
                     moveDirection.z = 0;
                     moveDirection.Normalize();
 
-                    GameObject projectile = (GameObject)Instantiate(bullet, firePosition.position, firePosition.rotation);
+                    GameObject projectile = (GameObject)Instantiate(bullet[Random.Range(0,3)], firePosition.position, firePosition.rotation);
                     projectile.GetComponent<Rigidbody2D>().velocity = moveDirection * speed;
                     bullets--;
                     BulletsManager.PlayerShot(1);

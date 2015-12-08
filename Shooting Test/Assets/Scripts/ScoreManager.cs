@@ -59,11 +59,11 @@ public class ScoreManager : MonoBehaviour
 
         text.text = "" + score;
 
-        if (score == 15)
+        if (score == 2)
         {
             backgroundScroller.StopSound();
-            scoreMiddleBat.ChangeRadius();
-            scoreMiddleSquirrel.ChangeRadius();
+            scoreMiddleBat.ChangeRadiusBat();
+            scoreMiddleSquirrel.ChangeRadiusSquirrel();
             fasterSound.StartFasterSound();
             changeRadiusSound.ChangeRadiusSong();
             //backgroundScroller.ChangeVelocityBackground();

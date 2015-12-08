@@ -741,7 +741,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49bf62fd84dc16b4298990ea3b486325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 181494, guid: dbde06d15e149fb44a46fe70200179a6, type: 2}
+  bullet:
+  - {fileID: 181494, guid: dbde06d15e149fb44a46fe70200179a6, type: 2}
+  - {fileID: 181494, guid: 8585c885f1035d54fa36ddacb7f2d79b, type: 2}
+  - {fileID: 181494, guid: 8566bf66d0491d64081098880e40373e, type: 2}
   speed: 10
   firePosition: {fileID: 525334988}
   pauseShoot: 0
